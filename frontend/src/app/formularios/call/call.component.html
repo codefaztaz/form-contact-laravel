@@ -1,0 +1,145 @@
+<div class="container">
+<h1>Book a call</h1>
+
+<form autocomplete="off" [formGroup]="forma" (ngSubmit)="send()">
+
+  <div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label"
+      [@list1]>Name</label>
+      <div class="col">
+
+        <input class="form-control"
+               type="text"
+               placeholder="Name"
+               formControlName="name"
+               [class.is-invalid]="nombreNoValido"
+               [@list1]>
+        <small *ngIf="nombreNoValido" class="text-danger">
+          write the name
+        </small>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label"
+      [@list1]>Phone</label>
+      <div class="col">
+
+        <input class="form-control"
+               type="number"
+               placeholder="phone"
+               formControlName="phone"
+               [class.is-invalid]="telefonoNoValido"
+               [@list1]>
+        <small *ngIf="telefonoNoValido" class="text-danger">
+                Write the phone number
+        </small>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">&nbsp;</label>
+    <div class="input-group col">
+      <button type="submit" class="btn btn-outline-primary btn-block"
+      [@list1]>
+        Send
+      </button>
+    </div>
+  </div>
+
+</form>
+    <!-- <div> -->
+
+      <!-- <div class="form-group row">
+        <label class="col-2 col-form-label"
+        [@list1]>Name</label>
+        <div class="col-sm-6"> -->
+
+
+
+          <!-- <input class="form-control"
+                 type="text"
+                 placeholder="Name"
+                 name="ngModel"
+                 [(ngModel)]="email.name"
+                 name="name"
+                 required
+                 pattern="[a-zA-Z]+"
+                 [@list1]
+                 formControlName="name"
+                 [ngClass]="{ 'is-invalid': f.submitted && name.invalid }"> -->
+          <!-- <input class="form-control"
+                 type="text"
+                 placeholder="Name"
+                 formControlName="name"
+                 [class.is-invalid]="nombreNoValido"
+                 [@list1]> -->
+                 <!-- <div *ngIf="f.submitted && name.invalid" class="invalid-feedback">
+                 <div *ngIf="name.required">First Name is required</div>
+                 </div> -->
+
+          <!-- <small *ngIf="!name.valid && name.touched" class="text-danger">
+            you must write a name
+          </small> -->
+        <!-- </div>
+      </div> -->
+
+      <!-- <div class="form-group row">
+        <label class="col-2 col-form-label"
+        [@list1]>phone</label>
+        <div class="col-sm-6">
+
+          <input class="form-control"
+                 type="number"
+                 placeholder="phone"
+                 #phone="ngModel"
+                 [(ngModel)]="email.phone"
+                 name="phone"
+                 [@list1]> -->
+          <!-- <input class="form-control"
+                 type="number"
+                 placeholder="phone"
+                 formControlName="phone"
+                 [class.is-invalid]="telefonoNoValido"
+                 [@list1]>        -->
+          <!-- <small *ngIf="telefonoNoValido" class="text-danger">
+                  write the phone
+          </small> -->
+        <!-- </div>
+      </div>
+
+    </div> -->
+
+
+
+
+    <!-- <div class="form-group row">
+      <label class="col-2 col-form-label">&nbsp;</label>
+      <div class="input-group col-sm-6">
+        <button type="submit" class="btn btn-outline-primary btn-block"
+        [@list1]>
+          Send
+        </button>
+      </div>
+    </div>
+
+  </form> -->
+
+
+
+
+<hr>
+<pre>
+  form state: {{ forma.valid }}
+  <br>
+  Status: {{ forma.status }}
+</pre>
+
+<pre>
